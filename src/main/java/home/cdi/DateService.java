@@ -15,7 +15,7 @@ public class DateService {
         date = new Date();
     }
 
-    @MyInterceptorAnnotation(/*interceptorType = MyInterceptorType.TWO*/)
+    @MyInterceptorAnnotation(interceptorType = MyInterceptorType.TWO)
     public String getTimeAndDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         return sdf.format(date);

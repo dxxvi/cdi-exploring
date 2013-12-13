@@ -16,7 +16,7 @@ public class MyInterceptor {
         Method method = invocationContext.getMethod();
         MyInterceptorAnnotation myInterceptorAnnotation = method.getAnnotation(MyInterceptorAnnotation.class);
 
-        System.out.println("You're passing this interceptor with " + /*myInterceptorAnnotation.interceptorType() +*/
+        System.out.println("You're passing this interceptor with " + myInterceptorAnnotation.interceptorType() +
                 " for " + target.getClass().getName() + "." + method.getName());
 
         return invocationContext.proceed();
